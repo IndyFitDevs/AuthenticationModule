@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidnetworking.AndroidNetworking;
@@ -18,10 +19,11 @@ import org.json.JSONObject;
 
 public class LoginActivity extends AppCompatActivity {
 
-    // UI elements initialization
+    // UI elements declaration
     EditText email_username;
     EditText user_password;
     Button login;
+    TextView signup;
 
     // Variable initialization
     String api_key = "";
@@ -35,10 +37,11 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         AndroidNetworking.initialize(getApplicationContext());
 
+        // UI elements initialisation
         email_username = (EditText) findViewById(R.id.editText_email);
         user_password = (EditText) findViewById(R.id.editText_password);
         login = (Button) findViewById(R.id.button_signup);
-
+        signup = (TextView) findViewById(R.id.textview_registerpage);
 
     }
 
@@ -81,8 +84,10 @@ public class LoginActivity extends AppCompatActivity {
                         toast.show();
                     }
                 });
+    }
 
-
-
+    public void signupPage(View view) {
+        Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+        startActivity(intent);
     }
 }
