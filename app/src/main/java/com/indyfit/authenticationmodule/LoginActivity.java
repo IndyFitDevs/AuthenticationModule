@@ -24,17 +24,15 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class LoginActivity extends AppCompatActivity {
-    private TextView mTextViewResult;
+
+    String api_key = "";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        AndroidNetworking.initialize(getApplicationContext());
 
-        Toast toast = Toast. makeText(getApplicationContext(), "Hello Parth",
-                Toast. LENGTH_SHORT);
-        toast.show();
-
-
+        // code to POST data to API
         JSONObject jsonObject = new JSONObject();
         try {
             jsonObject.put("username", "indyfit.tester@yopmail.com");
@@ -49,8 +47,9 @@ public class LoginActivity extends AppCompatActivity {
                 .getAsJSONObject(new JSONObjectRequestListener() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        final String myResponse = response.optString("key");
-                        Toast toast = Toast. makeText(getApplicationContext(), myResponse,
+                        api_key = response.optString("key");
+                        Toast toast = Toast. makeText(getApplicationContext(), "Successfully " +
+                                        "logged in.",
                                 Toast. LENGTH_SHORT);
 
                         toast.show();
@@ -58,36 +57,11 @@ public class LoginActivity extends AppCompatActivity {
 
                     @Override
                     public void onError(ANError anError) {
-                        Toast toast = Toast. makeText(getApplicationContext(), "Error",
+                        Toast toast = Toast. makeText(getApplicationContext(), "Unable to log in with provided credentials.",
                                 Toast. LENGTH_SHORT);
                         toast.show();
                     }
                 });
-
-//        mTextViewResult = findViewById(R.id.text_view_result);
-//        OkHttpClient client = new OkHttpClient();
-//        String url = "https://indyfit.herokuapp.com/diet/recipes/45/";
-//        Request request = new Request.Builder()
-//                .url(url)
-//                .build();
-//        client.newCall(request).enqueue(new Callback() {
-//            @Override
-//            public void onFailure(Call call, IOException e) {
-//                e.printStackTrace();
-//            }
-//            @Override
-//            public void onResponse(Call call, Response response) throws IOException {
-//                if (response.isSuccessful()) {
-//                    final String myResponse = response.body().string();
-//                    LoginActivity.this.runOnUiThread(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            mTextViewResult.setText(myResponse);
-//                        }
-//                    });
-//                }
-//            }
-//        });
 
 
     }
