@@ -7,7 +7,7 @@
     tools:context=".LoginActivity">
 
     <TextView
-        android:id="@+id/textview_loginpage"
+        android:id="@+id/textview_registerpage"
         android:layout_width="141dp"
         android:layout_height="37dp"
         android:layout_marginLeft="34dp"
@@ -32,7 +32,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.031"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_loginpage" />
+        app:layout_constraintTop_toBottomOf="@+id/textview_registerpage" />
 
     <EditText
         android:id="@+id/editText_email"
@@ -76,7 +76,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView_enterpass" />
 
     <Button
-        android:id="@+id/button_login"
+        android:id="@+id/button_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -103,7 +103,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editText_password" />
 
     <TextView
-        android:id="@+id/textView_signuphere"
+        android:id="@+id/textView_loginhere"
         android:layout_width="265dp"
         android:layout_height="20dp"
         android:text="Don't have an account? Signup here!"
@@ -113,7 +113,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_login"
+        app:layout_constraintTop_toBottomOf="@+id/button_signup"
         app:layout_constraintVertical_bias="0.071" />
 
     <Button
@@ -125,7 +125,7 @@
         android:textSize="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView_signuphere" />
+        app:layout_constraintTop_toBottomOf="@+id/textView_loginhere" />
 
     <Button
         android:id="@+id/button_facebook"

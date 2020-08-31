@@ -7,25 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidnetworking.AndroidNetworking;
 import com.androidnetworking.error.ANError;
-import com.androidnetworking.interfaces.JSONArrayRequestListener;
 import com.androidnetworking.interfaces.JSONObjectRequestListener;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.io.IOException;
-
-import okhttp3.Call;
-import okhttp3.Callback;
-import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -48,7 +37,7 @@ public class LoginActivity extends AppCompatActivity {
 
         email_username = (EditText) findViewById(R.id.editText_email);
         user_password = (EditText) findViewById(R.id.editText_password);
-        login = (Button) findViewById(R.id.button_login);
+        login = (Button) findViewById(R.id.button_signup);
 
 
     }
