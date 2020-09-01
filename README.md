@@ -10,6 +10,10 @@ This project is a module for implementing user login, signup, and forgot passwor
 6. **Splash Screen**
 
 ## App Screenshots
+![img1](https://github.com/IndyFitDevs/AuthenticationModule/blob/master/screenshots/img1.jpeg)
+![img2](https://github.com/IndyFitDevs/AuthenticationModule/blob/master/screenshots/img2.jpeg)
+![img3](https://github.com/IndyFitDevs/AuthenticationModule/blob/master/screenshots/img3.jpeg)
+![img4](https://github.com/IndyFitDevs/AuthenticationModule/blob/master/screenshots/img4.jpeg)
 
 
 ## Built With
