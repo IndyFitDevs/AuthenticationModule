@@ -49,7 +49,7 @@ public class ForgotActivity extends AppCompatActivity {
 
 
 
-        AndroidNetworking.post("hhttps://api.indy.fit/rest-auth/password/reset/")
+        AndroidNetworking.post("https://api.indy.fit/rest-auth/password/reset/")
                 .addJSONObjectBody(jsonObject) // posting json
                 .build()
                 .getAsJSONObject(new JSONObjectRequestListener() {
