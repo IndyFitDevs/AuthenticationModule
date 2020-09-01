@@ -15,7 +15,7 @@ import android.widget.ImageView;
 public class SplashActivity extends AppCompatActivity {
 
     // variable for timeout duration
-    public static int SPLASH_SCREEN_TIMEOUT = 1500;
+    public static int SPLASH_SCREEN_TIMEOUT = 800;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
