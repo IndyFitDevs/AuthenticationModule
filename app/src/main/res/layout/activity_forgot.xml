@@ -8,68 +8,82 @@
 
     <TextView
         android:id="@+id/textview_forgotpage"
-        android:layout_width="195dp"
-        android:layout_height="36dp"
+        android:layout_width="220dp"
+        android:layout_height="37dp"
         android:layout_marginLeft="34dp"
-        android:layout_marginEnd="108dp"
+        android:layout_marginEnd="96dp"
         android:text="Forgot Password"
-        android:textSize="25dp"
+        android:textSize="28dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.322" />
-
-    <TextView
-        android:id="@+id/textView_enteremail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="24dp"
-        android:text="Enter your email address"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.151"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textview_forgotpage" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.099" />
 
     <EditText
         android:id="@+id/editText_email"
         android:layout_width="281dp"
         android:layout_height="36dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="8dp"
         android:ems="8"
         android:hint="Email Address"
         android:inputType="textEmailAddress"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.261"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView_enteremail" />
+
+    <TextView
+        android:id="@+id/textView_status"
+        android:layout_width="288dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="4dp"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.292"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText_email" />
+
+    <TextView
+        android:id="@+id/textView_enteremail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="24dp"
+        android:text="Enter your email address"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_forgotpage" />
+
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:text="submit"
         android:onClick="forgot_pass"
+        android:text="submit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editText_email"
-        app:layout_constraintVertical_bias="0.07" />
+        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/textView_status"
-        android:layout_width="286dp"
-        android:layout_height="15dp"
-        android:layout_marginTop="2dp"
-        android:textSize="10sp"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="514dp"
+        android:layout_height="877dp"
+        android:layout_marginBottom="350dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.536"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_email" />
+        app:srcCompat="@drawable/backdrop" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
