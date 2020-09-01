@@ -24,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     EditText user_password;
     Button login;
     TextView signup;
+    TextView forgot;
 
     // Variable initialization
     String api_key = "";
@@ -42,6 +43,7 @@ public class LoginActivity extends AppCompatActivity {
         user_password = (EditText) findViewById(R.id.editText_password);
         login = (Button) findViewById(R.id.button_signup);
         signup = (TextView) findViewById(R.id.textview_forgotpage);
+        forgot = (TextView) findViewById(R.id.textView_forgotpass);
 
     }
 
@@ -89,6 +91,11 @@ public class LoginActivity extends AppCompatActivity {
 
     public void signupPage(View view) {
         Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+        startActivity(intent);
+    }
+
+    public void forgotPage(View view) {
+        Intent intent = new Intent(LoginActivity.this, ForgotActivity.class);
         startActivity(intent);
     }
 }
